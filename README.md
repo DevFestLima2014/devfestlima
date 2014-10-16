@@ -28,8 +28,15 @@ En la ruta que clonaron el repo, ingresar al directorio e instalar jekyll
 
 $ gem install jekyll
 
-Run:
+Run: (port default 4000)
 
  $ jekyll serve -w
 
+Run en :80 (chequear antes que ningun servicio use el 80)
+
+ $ jekyll serve -w --port 80
+
 *correrá en http://localhost:4000/devfestlima/
+*correrá en http://localhost/devfestlima/
+
+*si en caso no arranca es porque por el java runtime necesitan instalar la gema: gem install therubyracer
