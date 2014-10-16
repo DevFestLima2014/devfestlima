@@ -1,0 +1,38 @@
+- 
+  id: 1
+  name: "Carlos"
+  surname: "Pinan"
+  company: "GDG Lima"
+  title: "Desarrollador de juegos - Manager"
+  bio: '<p>Desarrollador. Especialista en juegos. Utiliza framework Coco 2X .</p>'
+  thumbnailUrl: cpinan.jpg
+  rockstar: true
+  social: 
+    - {name: "google-plus", link: "https://plus.google.com/u/0/+CarlosEduardoPinanIndacochea/posts"}
+    - {name: "twitter", link: "https://twitter.com/carlospinan"}
+- 
+  id: 2
+  name: "Eduardo"
+  surname: "Medina"
+  company: "GDGLima"
+  title: "Android Developer"
+  bio: "<p>Eduardo, especialista en desarrolllo de juegos, mobile y aplicaciones interactivas."
+  thumbnailUrl: emedina.png
+  rockstar: true
+  social: 
+    - {name: "google-plus", link: "https://plus.google.com/u/0/+EduardoJoseMedinaAlfaro/posts"}
+    - {name: "twitter", link: "https://twitter.com/eduardomedina"}
+
+
+- 
+  id: 3
+  name: "Hansy"
+  surname: "Schmitt"
+  company: "GDG Lima"
+  title: "Hacksy"
+  bio: "Desarrollador,miembro del GDGLima, desarrollador en Cloud y todo lo que se puedea programar xD"
+  thumbnailUrl: hcamacho.jpg
+  rockstar: true
+  social: 
+    - {name: "google-plus", link: "https://plus.google.com/u/0/+HansySchmitt1/posts"}
+    - {name: "twitter", link: "https://twitter.com/randomsy"}

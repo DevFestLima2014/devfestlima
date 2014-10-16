@@ -1,0 +1,34 @@
+-
+  id: 307
+  title: "Coffee Break"
+  place: "Hall"
+  service: true
+-
+  id: 503
+  title: "Lunch Break"
+  place: "Dining room"
+  service: true
+-
+  id: 001
+  title: "Android L"
+  description: "Android L , nuevo sistema operativo con las nuevas caracteristicas de material design"
+  subtype: presentation
+  speakers: [2]
+  language: es
+  complexity: "Intermediate"
+-
+  id: 002
+  title: "Mi primera applicacion Google App Engine"
+  description: "Conoces Google App Engine ? Aprende con nosotros"
+  subtype: workshop
+  speakers: [3]
+  language: es
+  complexity: "Beginner"
+-
+  id: 003
+  title: "Como hacer un juego y no morir en el intento"
+  description: "Quieres hacer un juego en android y no sabes por donde empezar. Nosotros te ayudaremos... "
+  subtype: presentation
+  speakers: [1]
+  language: es
+  complexity: "Intermediate"

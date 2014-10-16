@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/about/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/blog/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/cod/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/feed.xml</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/hackathon/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/logistics/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/css/main.css</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/schedule/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/speakers/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/team/</loc>
+    </url>
+    
+    
+    
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/blog/welcome-to-jekyll</loc>
+    </url>
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/blog/call-for-papers</loc>
+    </url>
+    
+    <url>
+        <loc>http://myarleque.github.io/devfestlima/blog/hello-world</loc>
+    </url>
+    
+</urlset>
