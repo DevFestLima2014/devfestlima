@@ -8,55 +8,55 @@
     
     
     <url>
-        <loc>http://limadevfest/about/</loc>
+        <loc>http://limadevfest.com/about/</loc>
     </url>
     
     
     
     <url>
-        <loc>http://limadevfest/blog/</loc>
+        <loc>http://limadevfest.com/blog/</loc>
     </url>
     
     
     
     <url>
-        <loc>http://limadevfest/cod/</loc>
+        <loc>http://limadevfest.com/cod/</loc>
     </url>
     
     
     
     <url>
-        <loc>http://limadevfest/feed.xml</loc>
+        <loc>http://limadevfest.com/feed.xml</loc>
     </url>
     
     
     
     <url>
-        <loc>http://limadevfest/hackathon/</loc>
+        <loc>http://limadevfest.com/hackathon/</loc>
     </url>
     
     
     
     <url>
-        <loc>http://limadevfest/</loc>
+        <loc>http://limadevfest.com/</loc>
     </url>
     
     
     
     <url>
-        <loc>http://limadevfest/logistics/</loc>
+        <loc>http://limadevfest.com/logistics/</loc>
     </url>
     
     
     
     <url>
-        <loc>http://limadevfest/css/main.css</loc>
+        <loc>http://limadevfest.com/css/main.css</loc>
     </url>
     
     
     
     <url>
-        <loc>http://limadevfest/schedule/</loc>
+        <loc>http://limadevfest.com/schedule/</loc>
     </url>
     
     
@@ -64,28 +64,28 @@
     
     
     <url>
-        <loc>http://limadevfest/speakers/</loc>
+        <loc>http://limadevfest.com/speakers/</loc>
     </url>
     
     
     
     <url>
-        <loc>http://limadevfest/team/</loc>
+        <loc>http://limadevfest.com/team/</loc>
     </url>
     
     
     
     
     <url>
-        <loc>http://limadevfest/blog/welcome-to-jekyll</loc>
+        <loc>http://limadevfest.com/blog/welcome-to-jekyll</loc>
     </url>
     
     <url>
-        <loc>http://limadevfest/blog/call-for-papers</loc>
+        <loc>http://limadevfest.com/blog/call-for-papers</loc>
     </url>
     
     <url>
-        <loc>http://limadevfest/blog/hello-world</loc>
+        <loc>http://limadevfest.com/blog/hello-world</loc>
     </url>
     
 </urlset>
