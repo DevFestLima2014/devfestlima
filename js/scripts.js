@@ -4,7 +4,6 @@
             $('#st-container').removeClass('disable-scrolling');
             $('#loading-animation').fadeOut();
             $('#preloader').delay(350).fadeOut(800);
-            initGooglePlus();
             equalheight('.same-height');
         });
 
@@ -45,11 +44,12 @@
                 buyButton.addClass('right-nav-button-hidden');
             }
 
-            $('.slot').each(function() {
+            $('.slot-element').each(function() {
                 var currentPosition = $(this).offset().top - scroll;
                 var offsetActivator = topOffset + $(this).find('.slot-title').height();
                 if (currentPosition <= offsetActivator && currentPosition >= 0) {
-                    $('.track-header.sticky').find('.slot-detail').html($(this).data('slotDetail'));
+                    var data = $(this).parent().data('slotDetail');
+                    $('.track-header.sticky').find('.slot-detail').html(data);
                 }
             });
         });
@@ -246,6 +246,20 @@
             }
         });
 
+        $('.404').each(function() {
+            $(this).parent().addClass('hidden-xs blank-col');
+        });
+        $('.service-label').each(function() {
+            var data = $(this).data('slotDetail');
+            $(this).parent().attr('data-slot-detail', data).addClass('service-slot');
+        });
+        $('.timeslot-elements').each(function() {
+            var elementsCount = $(this).children().length;
+            if ($(this).find('> div.blank-col').length == elementsCount) {
+                $(this).parent().addClass('hidden-xs');
+            }
+        });
+
 
         if (typeof twitterFeedUrl !== 'undefined') {
             $.getJSON(twitterFeedUrl, function(data) {
@@ -273,6 +287,7 @@
                 var $tweets = $('#tweets').find('.tweet'),
                     i = 0;
                 $($tweets.get(0)).removeClass('hidden');
+
                 function changeTweets() {
                     var next = (++i % $tweets.length);
                     $($tweets.get(next - 1)).addClass('hidden');
@@ -283,19 +298,13 @@
         }
     });
 
-    //Google plus
-    function initGooglePlus() {
-        var po = document.createElement('script');
-        po.type = 'text/javascript';
-        po.async = true;
-        po.src = 'https://apis.google.com/js/platform.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(po, s);
-    }
-
     // Google maps static
     if (typeof staticGoogleMaps !== 'undefined') {
-        $('#canvas-map').addClass('image-section').css('background-image','url(http://maps.googleapis.com/maps/api/staticmap?zoom=17&center=' + mobileCenterMapCoordinates +'&size=' + $(window).width() + 'x700&scale=2&language=en&markers=icon:' + icon +'|'+ eventPlaceCoordinates +'&maptype=roadmap&style=visibility:on|lightness:40|gamma:1.1|weight:0.9&style=element:labels|visibility:off&style=feature:water|hue:0x0066ff&style=feature:road|visibility:on&style=feature:road|element:labels|saturation:-30)');
+        if (typeof workshopPlace !== 'undefined') {
+            $('#canvas-map').addClass('image-section').css('background-image', 'url(http://maps.googleapis.com/maps/api/staticmap?zoom=16&center=' + mobileCenterMapCoordinates + '&size=' + $(window).width() + 'x700&scale=2&language=en&markers=' + eventPlaceCoordinates + '&markers=' + workshopPlace + '&maptype=roadmap&style=visibility:on|lightness:40|gamma:1.1|weight:0.9&style=element:labels|visibility:off&style=feature:water|hue:0x0066ff&style=feature:road|visibility:on&style=feature:road|element:labels|saturation:-30)');   
+        } else {
+            $('#canvas-map').addClass('image-section').css('background-image', 'url(http://maps.googleapis.com/maps/api/staticmap?zoom=17&center=' + mobileCenterMapCoordinates + '&size=' + $(window).width() + 'x700&scale=2&language=en&markers=' + eventPlaceCoordinates + '&maptype=roadmap&style=visibility:on|lightness:40|gamma:1.1|weight:0.9&style=element:labels|visibility:off&style=feature:water|hue:0x0066ff&style=feature:road|visibility:on&style=feature:road|element:labels|saturation:-30)');           
+        }
     }
 
     //Google maps
@@ -402,6 +411,8 @@
             if (googleMaps == 'logistics') {
                 mapOptions.zoom = 5;
                 mapOptions.zoomControl = true;
+            } else if (typeof workshopPlace !== 'undefined') {
+                mapOptions.zoom = 16;
             }
 
             map = new google.maps.Map(document.getElementById('canvas-map'), mapOptions);
@@ -411,6 +422,30 @@
                 icon: icon,
                 map: map
             });
+            if (typeof workshopPlace !== 'undefined') {
+                var workshopMarker = new google.maps.Marker({
+                    position: workshopPlace,
+                    animation: google.maps.Animation.DROP,
+                    icon: icon,
+                    map: map
+                });
+
+                var infowindowHackathon = new google.maps.InfoWindow({
+                    content: '<p><b>Hackathon</b> in ComeIn</p>'
+                });
+                var infowindowWorkshops = new google.maps.InfoWindow({
+                    content: '<p><b>Workshops</b> in coMMuna</p>'
+                });
+                infowindowHackathon.open(map, marker);
+                infowindowWorkshops.open(map, workshopMarker);
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindowHackathon.open(map, marker);
+                });
+                google.maps.event.addListener(workshopMarker, 'click', function() {
+                    infowindowWorkshops.open(map, workshopMarker);
+                });
+                markers.push(workshopMarker);
+            }
             markers.push(marker);
             var defaultMapOptions = {
                 name: 'Default Style'
