@@ -3,9 +3,12 @@
 class IndexController extends \Phalcon\Mvc\Controller {
 
    public function indexAction()    {
-       echo "<h1>Hello World!</h1>";
+       
+       $string = "Hello World!";
+	   $this->view->setVar("string", $string);
    }
 
 }
 
+?>
 

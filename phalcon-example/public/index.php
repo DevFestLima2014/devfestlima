@@ -34,3 +34,5 @@ try {
 } catch(\Phalcon\Exception $e) {
     echo "PhalconException: ", $e->getMessage();
 }
+
+?>
